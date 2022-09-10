@@ -15,6 +15,10 @@ const io = new Server(server, {
   },
 });
 
+app.get("/", (req, res) => {
+  res.send("Hello world");
+});
+
 // word for on must be as a lower case
 io.on("connection", (socket) => {
   console.log("connection...");
