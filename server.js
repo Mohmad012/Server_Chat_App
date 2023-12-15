@@ -13,17 +13,6 @@ const io = new Server(server, {
     origins: [`${process.env.SOCKET_CONNECT_URL}`],
     methods: ["GET", "POST"],
   },
-  // cors: {
-  //   origins: ["*"],
-  //   handlePreflightRequest: (req, res) => {
-  //     res.writeHead(200, {
-  //       "Access-Control-Allow-Origin": "*",
-  //       "Access-Control-Allow-Methods": "GET,POST",
-  //       "Access-Control-Allow-Credentials": true,
-  //     });
-  //     res.end();
-  //   },
-  // },
 });
 
 app.get("/", (req, res) => {
